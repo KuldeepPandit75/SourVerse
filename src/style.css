@@ -1,0 +1,44 @@
+/* General button styles */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 4px solid;
+    border-radius: 0; /* Sharp corners */
+    transition: transform 0.2s, background-color 0.3s; /* Smooth transition */
+}
+
+/* Payment Button */
+.button-payment {
+    background-color: #38a169; /* Green */
+    border-color: #2f855a; /* Darker green */
+}
+
+.button-payment:hover {
+    background-color: #2f855a; /* Darker on hover */
+    transform: scale(1.05); /* Slightly scale on hover */
+}
+
+/* Video Calling Button */
+.button-video {
+    background-color: #3182ce; /* Blue */
+    border-color: #2b6cb0; /* Darker blue */
+}
+
+.button-video:hover {
+    background-color: #2b6cb0; /* Darker on hover */
+    transform: scale(1.05); /* Slightly scale on hover */
+}
+
+.buttons{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

@@ -6,7 +6,7 @@ class TitleScreen extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('player', '../assets/car.jpg');
+        this.load.image('player', 'https://i.postimg.cc/ncSC2btS/idleChar.png');
         this.load.image('entryGate', '../assets/sprites/idleChar.png');
         this.load.image('stall', '../assets/sprites/idleChar.png');
         this.load.image('meetingRoom', '../assets/sprites/idleChar.png');
@@ -38,6 +38,9 @@ class TitleScreen extends Phaser.Scene {
         // Create player
         this.player = this.physics.add.sprite(this.cameras.main.width / 2, this.cameras.main.height * 0.1, 'player');
         this.player.setCollideWorldBounds(true);
+
+        // Resize the player
+        this.player.setScale(0.2, 0.2); // Adjust this value to change the player size
 
         // Add overlap detection between player and stalls
         this.physics.add.overlap(this.player, this.stalls, this.handleStallContact, null, this);
